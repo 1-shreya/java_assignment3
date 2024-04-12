@@ -1,0 +1,66 @@
+
+/*2.Print the sum, difference and product of two complex numbers by creating a
+class, named &#39;Complex&#39; with separate methods for each operation whose real and
+imaginary parts are entered by user. Use Constructors to initialize the data
+members2.Print the sum, difference and product of two complex numbers by creating a
+class, named &#39;Complex&#39; with separate methods for each operation whose real and
+imaginary parts are entered by user. Use Constructors to initialize the data
+members*/
+
+public class Complexnum {
+	double real;
+	double img;
+
+	public Complexnum(double real, double img) {
+		this.real = real;
+		this.img = img;
+	}
+
+	public Complexnum addition(Complexnum num) {
+		double real = this.real + num.real;
+		double img = this.img + num.img;
+		return new Complexnum(real, img);
+	}
+
+	public Complexnum subtraction(Complexnum num) {
+		double real = this.real - num.real;
+		double img = this.img - num.img;
+		return new Complexnum(real, img);
+	}
+
+	public void display() {
+		System.out.println(real + "+" + img + "i");
+	}
+
+	public void display2() {
+		System.out.println(real + "-" + img + "i");
+	}
+
+	public Complexnum multiplication(Complexnum num) {
+		double real = this.real * num.real;
+		double img = this.img * num.img;
+		return new Complexnum(real, img);
+	}
+
+	public void display3() {
+		System.out.println(real + "*" + img + "i");
+	}
+
+	public static void main(String[] args) {
+		Complexnum complexnum1 = new Complexnum(4, 5);
+		Complexnum complexnum2 = new Complexnum(2, 3);
+		System.out.println("Addition of complex number");
+		Complexnum result = complexnum1.addition(complexnum2);
+		result.display();
+		System.out.println("--------------------------------");
+		System.out.println("substraction of complex number");
+		Complexnum result1 = complexnum1.subtraction(complexnum2);
+		result1.display2();
+		System.out.println("--------------------------------");
+		System.out.println(" multiplicationof complex number");
+		Complexnum result2 = complexnum1.multiplication(complexnum2);
+		result2.display3();
+
+	}
+
+}

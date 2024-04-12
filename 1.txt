@@ -1,0 +1,43 @@
+public class Triangle {
+	private double s1;
+	private double s2;
+	private double s3;
+	double peri,s,area;
+	public Triangle(double s1, double s2, double s3) {
+		super();
+		this.s1 = s1;
+		this.s2 = s2;
+		this.s3 = s3;
+	}
+	
+	public double calPeri() {
+		 peri=s1+s2+s3;
+		return(peri);
+	}
+	public double calArea()
+	{
+		s=peri/2;
+		area=Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));
+		return (area);
+	}
+	public void details() {
+		System.out.println("side 1:"+s1);
+		System.out.println("side 2:"+s2);
+		System.out.println("side 3:"+s3);
+		System.out.println("Perimeter of triangle is  :"+peri);
+		System.out.println("Area of triangle is  :"+area);
+	}
+
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Triangle triangle=new Triangle(3,4,5);
+	
+		triangle.calPeri();
+		triangle.calArea();
+		triangle.details();
+	}
+
+}

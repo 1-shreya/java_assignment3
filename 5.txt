@@ -1,0 +1,29 @@
+public class Time {
+	static int hr,min,sec;
+	
+		public Time(int hr, int min, int sec) {
+		super();
+		this.hr = hr;
+		this.min = min;
+		this.sec = sec;
+	}
+
+		public static boolean isvalid(int hr,int min,int sec) {
+			return(hr>=0&&hr<24)&&(min>=0&&min<60)&&(sec>=0&&sec<60);
+		
+	}
+		public static void display()
+		{
+			System.out.println(hr+":"+min+":"+sec);
+		}
+		public static void main(String args[]) {
+		
+			
+			boolean var =Time.isvalid(23,25,39);
+			if(var==true) {
+				Time obj=new Time(3,45,52);
+			}
+			Time.display();
+		}
+
+}
